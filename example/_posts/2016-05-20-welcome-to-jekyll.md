@@ -1,5 +1,12 @@
 ---
 layout: post
+author: your name
+abstract: one line description
+altnames: name1, name2
+depends_on_patterns: pattern dop 1, pattern dep 2
+precondition_for_patterns: pattern pfp 1, pattern pfp 2
+conflicts_with_patterns: pattern conwp 1, pattern conwp 2
+compounds_with_patterns: pattern comwp 1, patter comwp 2
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
