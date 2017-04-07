@@ -5,7 +5,13 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p>Published: <time class="post-meta" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p>Alternative names: <altnames class="post-meta" datetime="{{ page.altnames }}">{{ page.altnames }}</altnames>
+    <p>Abstract: <abstract class="post-meta" datetime="{{ page.abstract }}">{{ page.abstract }}</abstract>
+    <p>Depends on pattern(s): <dop class="post-meta" datetime="{{ page.depends_on_patterns }}">{{ page.depends_on_patterns }}</dop>
+    <p>Precondition for pattern(s): <pfp class="post-meta" datetime="{{ page.precondition_for_patterns }}">{{ page.precondition_for_patterns }}</pfp>
+    <p>Conflicts with pattern(s): <cwp class="post-meta" datetime="{{ page.conflicts_with_patterns }}">{{ page.conflicts_with_patterns }}</cwp>
+    <p>Compounds with pattern(s): <cwp class="post-meta" datetime="{{ page.conflicts_with_patterns }}">{{ page.conflicts_with_patterns }}</cwp>
   </header>
 
   <div class="post-content" itemprop="articleBody">
