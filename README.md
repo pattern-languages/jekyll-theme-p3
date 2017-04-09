@@ -6,7 +6,18 @@ based on:
 
 ## Development
 
-run example:
+### run example
+
+run example ("bundler exec rake preview" would not work because of
+[jekyll-admins dependency specification in the Gemfile](https://github.com/jekyll/jekyll-admin/issues/136#issue-171979801)):
 
     cd example
-    bundler exec rake preview
+    DISABLE_WHITELIST=true bundle exec jekyll serve
+
+open website:
+
+    http://localhost:4000/
+
+open admin dashboard:
+
+    http://127.0.0.1:4000/admin
